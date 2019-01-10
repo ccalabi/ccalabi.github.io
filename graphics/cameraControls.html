@@ -1,0 +1,53 @@
+<!-- Based on ClickedPoints.html (c) 2012 matsuda
+Cori Calabi, ccalabi -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cmps 160 Assignment 7</title>
+        <script src="lib/webgl-utils.js"></script>
+        <script src="lib/webgl-debug.js"></script>
+        <script src="lib/cuon-utils.js"></script>
+        <script src="lib/cuon-matrix.js"></script>
+        <script src="lib/load-file.js"></script>
+        <script src="lib/ioSOR.js"></script>
+        <script src="cameraControls.js"></script>
+    </head>
+
+    <body onload="main()">
+        <div>
+            <p>Keyboard controls to pan the camera:<br>
+            Left: Left arrow key &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right: Right arrow key<br>
+            Up (Pos. Y): Up arrow key &nbsp;&nbsp; Down (Neg. Y): Down arrow key<br>
+            Pos. Z: +/= key &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Neg. Z: -/_ key</p>
+            Rotate around Z-axis: <br>
+            <button type="button" id="rotateZclock">Rotate Clockwise</button>
+            <button type="button" id="rotateZcounter">Rotate Counterclockwise</button> (Easiest to see the rotation if you click quickly)<br>
+            <div>
+                <span>Zoom:  </span>
+                <input type="range" min="1" max="60" value="30" id="zoomSlider">
+                <span id="currentZoom">Current zoom: 30</span>
+            </div>
+            <div>
+                <span>Scale:  </span>
+                <input type="range" min="1" max="30" value="10" id="scaleSlider">
+                <span id="curScale">Current scale: 1</span>
+            </div>
+            <div>
+                <span>Stretch the scene:  </span>
+                <input type="range" min="1" max="7" value="3" id="aspectSlider">
+                <span id="currentAspect">Current aspect ratio: 1</span>
+            </div>
+            <div>
+                <span>Turn the camera:  </span>
+                <input type="range" min="1" max="5" value="3" id="turnCamSlider">
+                <span id="turnCamInfo"></span>
+            </div>
+        </div>
+        <div id="outer">
+            <canvas id="webgl" width="500" height="500">
+                Please use a browser that supports "canvas"
+            </canvas>
+        </div>        
+    </body>
+</html>
