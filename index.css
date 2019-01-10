@@ -1,0 +1,22 @@
+body {
+	color:#004d00;
+	background-color:#f2ffe6;
+}
+div.about-me{
+	font-family:Papyrus;
+	text-align:center;
+}
+#picture img{
+	text-align:center;
+	width:480px;
+	height:342.5px;
+}
+div.personal-info{
+	text-align:center;
+	font-family:Papyrus;
+}
+div.assignments{
+	font-family:Papyrus;
+	font-size:13px;
+	text-align:center;
+}
