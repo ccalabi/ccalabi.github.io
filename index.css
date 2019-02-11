@@ -1,22 +1,18 @@
 body {
-	color:#004d00;
-	background-color:#f2ffe6;
+	color:black;
+	padding-left: 20px;
+	font-family: Garamond;
 }
 div.about-me{
-	font-family:Papyrus;
-	text-align:center;
+	font-family: Garamond;
 }
-#picture img{
-	text-align:center;
-	width:480px;
-	height:342.5px;
-}
+
 div.personal-info{
 	text-align:center;
-	font-family:Papyrus;
+	
 }
 div.assignments{
-	font-family:Papyrus;
 	font-size:13px;
 	text-align:center;
 }
+

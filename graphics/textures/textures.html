@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 8</title>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/load-file.js"></script>
+    <script src="lib/ioSOR.js"></script>
+    <script src="lib/cmpsengine.js"></script>
+    <script src="textures.js"></script>
+  </head>
+
+  <body onload="main()">
+    <p>Controls: <br>
+        To pan, use keys:<br>
+        -Left arrow key: Move negative X<br>
+        -Right arrow key: Move positive X<br>
+        -Up arrow key: Move negative Z<br>
+        -Down arrow key: Move positive Z<br>
+        - , /< (comma/less than) key: Move negative Y<br>
+        - . /> (period/greater than) key: Move positive Y<br><bR>
+        To rotate, use mouse, click and drag in direction you want to rotate.
+    </p>
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <!-- <input type="file" id="fileinput" />
+    <button id="update_screen" type="button">Extract SOR</button>
+    <button id="save_canvas" type="button">Save</button>
+    <button id="reset_canvas" type="button">Reset Canvas</button> -->
+  </body>
+</html>

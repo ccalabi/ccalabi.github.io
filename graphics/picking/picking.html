@@ -1,0 +1,61 @@
+<!-- Cori Calabi, ccalabi -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cmps 160 Assignment 5</title>
+        <script src="lib/webgl-utils.js"></script>
+        <script src="lib/webgl-debug.js"></script>
+        <script src="lib/cuon-utils.js"></script>
+        <script src="lib/cuon-matrix.js"></script>
+        <script src="lib/load-file.js"></script>
+        <script src="lib/ioSOR.js"></script>
+        <script src="picking.js"></script>
+    </head>
+
+    <body onload="main()">
+        <div>
+            <h4>Instructions: Left click a few times on the canvas, then right click to complete the polyline.</h4> <br><br>
+        	Move:  
+            <button type="button" id="shift_cyl">Shift cylinder right</button>
+            <button type="button" id="shift_light">Shift light left</button>
+            <br>
+            Color:  
+            <button type="button" id="changeAmbient">Change ambient color</button> 
+            <button type="button" id="changeSpec">Change specular color</button> 
+            <br>
+            Shading:  
+            <button type="button" id="switchPhGo">Switch to Phong</button> 
+            <button type="button" id="switchDepth">Switch to Depth</button> <br> 
+            (Note: Must be in Gouraud to show depth shading) <br>
+            Projections:
+            <button type="button" id="switchOrthoPersp">Switch to Orthographic</button> <br>
+            Camera View:
+            <button type="button" id="moveCamera">Move Camera to 1,1,5</button> <br>
+            (Note: Must be in Perspective to see change)<br>
+        </div>
+        <br>
+        <div>
+            <span>Change near plane (4-6) (Eye Z at 5):  </span>
+            <input type="range" min="0" max="50" value="0" id="nearSlider"><br>
+            (Note: Must be in perspective to see near plane changes)<br>
+            <span id="nearPlane">Current near plane: 4</span>
+        </div>
+        <div>
+            <span>Choose specular glossiness (5-40):  </span>
+            <input type="range" min="5" max="40" value="20" id="specularSlider">
+            <span id="glossiness">Current glossiness: 20</span>
+        </div>
+        <div>
+            <span>Choose radius of cylinder (0.02-0.20):  </span>
+            <input type="range" min="2" max="20" value="5" id="radiusSlider">
+            <span id="radiusSize">Current radius: 0.05</span>
+        </div>
+        
+        <div id="outer">
+            <canvas id="webgl" width="500" height="500">
+                Please use a browser that supports "canvas"
+            </canvas>
+        </div>        
+    </body>
+</html>
