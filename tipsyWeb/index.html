@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href= "css/index.css" type = "text/css">
+
+
+ <title>Home</title>
+
+ <!-- Tab icon -->
+ <link rel="icon" type="image/png" href="img/Beer-icon.png">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="TTLogo"/>
+        </a>
+      </div>
+      <ul id="profile" class="nav navbar-nav nav-navitems">
+         <a href="profile.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Profile</button></a>
+      </ul>
+      <ul id="login" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Login/SignUp</button></a>
+      </ul>
+      <ul id="logout" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button onclick="logout()" type="button" class="btn btn-primary btn-lg navbar-btn">Logout</button></a>
+      </ul>
+    </div>
+  </nav> <!-- ./End Navbar -->
+
+<!-- Carousel
+===================================================== -->
+<div class="container">
+		<div class="carousel slide" id="carousel" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel" data-slide-to="1"></li>
+					<li data-target="#carousel" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Items -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="img/stock1.jpg" alt="Stock 1">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>Tipsy Trials</h1>
+								<p class="lead">Play games to see how drunk you are!</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+		  				<img src="img/stock2.jpg" alt="Stock 2">
+		  				<div class="container">
+				            <div class="carousel-caption">
+				             	<h1>Simple and easy to use</h1>
+				             	<p class="lead">Set your baseline and test drunkeness anytime!</p>
+							</div>
+				        </div>
+		  			</div>
+
+		  			<div class="item">
+		  				<img src="img/stock3.jpg" alt="Stock 3">
+		  				 <div class="container">
+				            <div class="carousel-caption">
+				            	<div class="darktxt">
+								<h1>Test at home or on the go!</h1>
+					             <p class="lead">Create an account and test on desktop or mobile device</p>
+								</div>
+				            </div>
+				        </div>
+		  			</div>
+
+				</div> <!-- End Carousel inner -->
+			<a href="#carousel" class="left carousel-control" data-slide="prev">
+		  		<span class="glyphicon glyphicon-chevron-left"></span>
+		  	</a>
+		  	<a href="#carousel" class="right carousel-control" data-slide="next">
+		  		<span class="glyphicon glyphicon-chevron-right"></span>
+		  	</a>
+		</div> <!-- End Carousel -->
+</div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<div class="col-lg-12">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <a href="about.html" button type="button" class="btn btn-primary btn-lg btn-block">Play Now</button></a>
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<div class="container container1">
+  <h1>About Us</h1>
+  <p>Ever had a few drinks and heard someone say "Aw I'm not that drunk, I can totally drive"?</p>
+  <p>Tipsy Trials is a service people can use to see just how alcohol has really affected them.</p>
+  <p>How do we do this? Here you can test your drunk self with a series of games and see for yourself!</p>
+  <p>All you need to do is sign up and set a sober baseline score, then you can test yourself whenever you like.</p>
+  <p>Also available on Android.</p>
+</div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+    authDomain: "tippsy-trials.firebaseapp.com",
+    databaseURL: "https://tippsy-trials.firebaseio.com",
+    projectId: "tippsy-trials",
+    storageBucket: "",
+    messagingSenderId: "688884359408"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/index.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

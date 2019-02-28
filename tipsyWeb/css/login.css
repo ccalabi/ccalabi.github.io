@@ -1,0 +1,65 @@
+/*login text area style*/
+#login-page {
+  width: 360px;
+  padding: 4% 0 0;
+  margin: auto;
+}
+
+/* form style*/
+.form {
+  position: relative;
+  z-index: 2;
+  background: #222;
+  max-width: 400px;
+  margin: 0 auto 50px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Times", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#logged-in {
+  display: none;
+  color: #ffffff;
+  width: 400px;
+  padding: 4% 0 0;
+  margin: auto;
+}
+
+#logged-inbtn {
+  display: none;
+  color: #ffffff;
+}
+
+/*button style*/
+.btn {
+    padding: 14 24;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-width: 110px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #ffb916;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #ffb900;
+}

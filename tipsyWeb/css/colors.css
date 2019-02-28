@@ -1,0 +1,67 @@
+body {
+	background-color: #999;
+}
+
+#toType {
+	font-size: 35px;
+	color: blue;
+}
+
+#green {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	margin: 10px;
+	float: left;
+}
+
+#red {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	margin: 10px;
+	float: left;
+}
+
+#blue {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	margin: 10px;
+	clear: left;
+	float: left;
+}
+
+#orange {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+	margin: 10px;
+	float: left;
+}
+
+#minutes {
+	font-size: 50px;
+}
+
+#seconds {
+	font-size: 50px;
+
+}
+
+#Score {
+	font-size: 30px;
+}
+
+#feeds {
+	font-size: 30px;
+}
+
+#timer {
+	font-size: 50px;
+	margin: 20px;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href= "css/about.css" type = "text/css">
+
+
+ <title>About</title>
+
+ <!-- Tab icon -->
+ <link rel="icon" type="image/png" href="img/Beer-icon.png">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="TTLogo"/>
+        </a>
+      </div>
+      <ul id="profile" class="nav navbar-nav nav-navitems">
+         <a href="profile.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Profile</button></a>
+      </ul>
+      <ul id="login" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Login/SignUp</button></a>
+      </ul>
+      <ul id="logout" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button onclick="logout()" type="button" class="btn btn-primary btn-lg navbar-btn">Logout</button></a>
+      </ul>
+    </div>
+  </nav> <!-- ./End Navbar -->
+
+<div class="col-xs-12" style="height:50px;"></div>
+<!-- Game Description
+===================================================== -->
+<div class="container container1">
+  <h1>How to Play</h1>
+  <h2>The pictures below give an example of each game.<br><br>Look at each one before beginning your trials!</h2>
+  </br>
+  <h3>You'll play four games in total.<br><br>Play as fast as you can!</h3>
+</div>
+
+<div class="container container1">
+  <h1>Sentence Matching</h1>
+  <p>Type the sentence that appears exactly as shown.  Write 3 sentences correctly to continue</p>
+  <img src="img/SentMatch.jpg" id="sentMatchPhoto">
+</div>
+
+<div class="container container1">
+  <h1>Simple Math</h1>
+  <p>Complete 5 math problems using either the keyboard or numberpad</p>
+  <img src="img/mathGame.jpg" id="mathPhoto">
+</div>
+
+<div class="container container1">
+  <h1>Color Matching</h1>
+  <p>You will be given a Color to match using the buttons below</p>
+  <p>Be sure to click the color it says and not color it's displayed in!</p>
+  <img src="img/ColorMatch.jpg" id="colorPhoto">
+</div>
+
+<div class="container container1">
+  <h1>Maze Game</h1>
+  <p>The goal is to move the black circle to the green one</p>
+  <p>Use the directional keys on your keyboard to do this as quickly as you can!</p>
+  <img src="img/MazeGame.jpg" id="mazePhoto">
+  <p>Like this maze? Check out how it was made and by who <a href="https://codepen.io/rayrayxvv/pen/gaVjRN" target="_blank">here</a></p>
+
+</div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<div class="col-lg-12">
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-4">
+            <a href="play.html" button type="button" class="btn btn-primary btn-lg btn-block">Begin Trials</button></a>
+        </div>
+        <div class="col-xs-4">
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+    authDomain: "tippsy-trials.firebaseapp.com",
+    databaseURL: "https://tippsy-trials.firebaseio.com",
+    projectId: "tippsy-trials",
+    storageBucket: "",
+    messagingSenderId: "688884359408"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/about.js"></script>
+</body>
+
+</html>

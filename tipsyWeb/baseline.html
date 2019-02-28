@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href= "css/play.css" type = "text/css">
+
+
+ <title>Baseline</title>
+
+ <!-- Tab icon -->
+ <link rel="icon" type="image/png" href="img/Beer-icon.png">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="TTLogo"/>
+        </a>
+      </div>
+      <ul id="profile" class="nav navbar-nav nav-navitems">
+         <a href="profile.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Profile</button></a>
+      </ul>
+      <ul id="login" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button type="button" class="btn btn-primary btn-lg navbar-btn">Login/SignUp</button></a>
+      </ul>
+      <ul id="logout" class="nav navbar-nav nav-navitems navbar-right">
+         <a href="login.html" button onclick="logout()" type="button" class="btn btn-primary btn-lg navbar-btn">Logout</button></a>
+      </ul>
+    </div>
+  </nav> <!-- ./End Navbar -->
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<!-- Timer
+===================================================== -->
+<div class="container container1" id="timer">
+  <script type="text/javascript" src="js/time.js"></script>
+  <script>timeStart();</script>
+  <h3>Time
+  <span id="minutes" style="color:white"></span>:<span id="seconds" style="color:white"></span>
+  <span id="minutes1" style="color:white"></span><span id="colon" style="color:white"></span><span id="seconds1" style="color:white"></span>
+  </h3>
+</div>
+
+
+<!-- Game Window
+===================================================== -->
+<div class="container container1" id="sentenceGame">
+  <h1>Begin Your Trials</h1>
+
+  <!-- Sentence Game Div
+=======================================================-->
+  <div class="sentenceGame" id="sentenceGameDiv">
+    <script type="text/javascript" src="js/sentenceMatch.js"></script>
+	<script type="text/javascript" src="js/time.js"></script>
+    <h1>Sentence Matching Game</h1>
+    <p>Please type the sentence that is displayed. </p>
+    <form>
+      <div class="form-group">
+        <div id="toType1"><p id="toType">I want to be safe and sober!</p></div>
+        <div class="input-text">
+          <textarea  rows="5" cols="50" id="textinput" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off></textarea>
+        </div>
+      </div>
+    </form>
+    <button button type="button" class="btn btn-primary btn-lg " onclick="sentenceSubmit()">Submit</button>
+    <span id ="Score" style="color:green">Score: 0</span>
+    <!-- <span id="minutes" style="color:blue"></span>:<span id="seconds" style="color:blue"></span> -->
+    <p id="feeds"></p>
+  </div>
+</div>
+<!-- Math Game Div
+=======================================================-->
+<div class="container container1" id="mathGame">
+  <h1>Continue Your Trials</h1>
+  <div class="mathGame" id="mathGameDiv">
+    <script type="text/javascript" src="js/mathgame.js"></script>
+	<script type="text/javascript" src="js/time.js"></script>
+    <h1>Math Game</h1>
+    <p>Solve the arithmetic questions.</p>
+
+   <!--  <p id="timer">
+    </p> -->
+    <p id="inCorrect">
+    </p>
+    <p id="question">
+    </p>
+    <div id="mathinput">
+      <p><input type="number" id="numinput"/></p>
+    </div>
+    <div id="buttons">
+      <p><button type="button" id="one" class="btn btn-primary"> 1 </button>
+      <button type="button" id="two" class="btn btn-primary"> 2 </button>
+      <button type="button" id="three" class="btn btn-primary"> 3 </button>
+      </p>
+      <p><button type="button" id="four" class="btn btn-primary"> 4 </button>
+      <button type="button" id="five" class="btn btn-primary"> 5 </button>
+      <button type="button" id="six" class="btn btn-primary"> 6 </button>
+      </p>
+      <p><button type="button" id="seven" class="btn btn-primary"> 7 </button>
+      <button type="button" id="eight" class="btn btn-primary"> 8 </button>
+      <button type="button" id="nine" class="btn btn-primary"> 9 </button>
+      </p>
+      <p><button type="reset" id="reset" class="btn btn-primary">  Clear  </button>
+      <button type="button" id="zero" class="btn btn-primary"> 0 </button>
+      <button type="submit" id="mathsubmit" class="btn btn-primary">Submit</button>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Color Game Div
+=======================================================-->
+  <div class="container container1" id="colorGame">
+    <h1>Continue Your Trials</h1>
+    <div class="colorGame" id="colorGameDiv">
+      <script type="text/javascript" src="js/maze.js"></script>
+	  <script type="text/javascript" src="js/time.js"></script>
+      <script type="text/javascript" src="js/colors.js"></script>
+      <h1>Color Game</h1>
+      <p> Push the button that the text says, not the color the text is displayed as </p>
+      <p id="toTypeIn">Green</p>
+
+      <button id="green" class="btn btn-primary" onclick='newColor("Green")'> </button>
+      <button id="red" class="btn btn-primary" onclick='newColor("Red")'> </button>
+      <button id="blue" class="btn btn-primary" onclick='newColor("Blue")'> </button>
+      <button id="orange" class="btn btn-primary" onclick='newColor("Orange")'> </button>
+      <!-- <div id="timer"><span id="minutes" style="color:blue">00</span>:<span id="seconds" style="color:blue">00</span></div> -->
+      <span id ="colorScore">Score: 0</span>
+      <p id="colorFeeds"></p>
+      <p id="finish"></p>
+    </div>
+  </div>
+  <!-- Maze game Div
+    ========================================================-->
+  <div class="container container1" id="mazeGame">
+    <h1>Continue Your Trials</h1>
+    <div class ="mazeGame">
+      <div id="play">
+      </div>
+    </div>
+  </div>
+
+<!-- Win/Lose Div
+   ========================================================-->
+  <div class="container container1" id="winLose">
+    <h1>You finished the trials!</h1>
+    <div id="sober" style="display: none">
+      <h3> You are not drunk </h3>
+      <p> But you may still want to get a ride </p>
+      <a href="https://m.uber.com/looking" button onclick="logout()" type='button' class=" btn btn-primary btn-lg navbar-btn"> uber</button></a>
+      <a href="http://ride.lyft.com" button onclick="logout()" type='button' class=" btn btn-primary btn-lg navbar-btn"> Lyft</button></a>
+    </div>
+    <div id="drunk" style="display: none">
+      <h3> You're drunk!!! </h3>
+      <p> Make sure you're not driving tonight </p>
+      <a href="https://m.uber.com/looking" button onclick="logout()" type='button' class=" btn btn-primary btn-lg navbar-btn"> uber</button></a>
+      <a href="http://ride.lyft.com" button onclick="logout()" type='button' class=" btn btn-primary btn-lg navbar-btn"> Lyft</button></a>
+    </div>
+    <div id="baseline">
+      <h3> You have set your baseline!</h3>
+      <h4> Come back when you're tipsy!</h4>
+  </div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+    authDomain: "tippsy-trials.firebaseapp.com",
+    databaseURL: "https://tippsy-trials.firebaseio.com",
+    projectId: "tippsy-trials",
+    storageBucket: "",
+    messagingSenderId: "688884359408"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/baseline.js"></script>
+
+</body>
+
+</html>

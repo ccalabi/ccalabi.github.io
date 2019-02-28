@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="css/login.css" type = "text/css">
+ <!-- Tab icon -->
+ <link rel="icon" type="image/png" href="img/Beer-icon.png">
+
+<title>Login</title>
+
+</head>
+
+<body>
+
+  <div class = "userin" id="logged-inbtn">
+    <a href="login.html" button onclick="logout()" class="btn btn-primary btn-lg pull-right">Logout</button></a>
+  </div>
+
+<!-- login text area -->
+	<div id="login-page">
+	  <div class="form">
+				<input type="username" id="email" placeholder="Email" name="email"/>
+				<input type="password" id="password" placeholder="Password" name = "password"/>
+				<button onclick="login()" class="btn btn-primary btn-lg btn-block"> Login </button>
+	  </div>
+	</div>
+
+
+  <div class="col-lg-12">
+      <div class="row">
+          <div class="col-xs-5">
+          </div>
+          <div class="col-xs-2">
+            <a href="signup.html" <button type="button" id="signup-btn" class="btn btn-primary btn-lg btn-block"> Sign Up </button></a>
+          </div>
+          <div class="col-xs-5">
+          </div>
+      </div>
+  </div>
+
+  <div class="userin" id="logged-in">
+    <div class="form">
+      <h1> You are Logged in! </h1>
+      <br/>
+      <a href="about.html" button type="button" class="btn btn-primary btn-lg btn-block">Play Now</button></a>
+    </div>
+  </div>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+      authDomain: "tippsy-trials.firebaseapp.com",
+      databaseURL: "https://tippsy-trials.firebaseio.com",
+      projectId: "tippsy-trials",
+      storageBucket: "",
+      messagingSenderId: "688884359408"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src= "js/login.js" ></script>
+
+</body>

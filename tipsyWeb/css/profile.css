@@ -1,0 +1,71 @@
+/*button style*/
+.btn {
+    padding: 14 24;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #ffb916;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #ffb900;
+}
+
+/* navbar */
+.navbar {
+  min-height:80px !important;
+
+}
+
+/*buttons on navbar*/
+
+.nav-navitems {
+  padding-top: .4%;
+}
+
+.navbar-btn {
+  min-height: 50px !important;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+/*test overlay */
+.overlay {
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:50%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+
+.container1 {
+  margin-top: 8%;
+  background-color: #222;
+  text-align: center;
+  color: #ffffff;
+}
+
+.input-text {
+  color: #222;
+}
+    ; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

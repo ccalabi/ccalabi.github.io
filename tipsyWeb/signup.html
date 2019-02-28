@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="css/login.css" type = "text/css">
+ <!-- Tab icon -->
+ <link rel="icon" type="image/png" href="img/Beer-icon.png">
+
+<title>SignUp</title>
+
+</head>
+
+<body>
+<!-- sign up text area -->
+	<div id="login-page">
+	  <div class="form">
+				<input type="email" id="email" placeholder="Email" name = "email"/>
+        <input type="password" id="password" placeholder="Password" name="password"/>
+				<input type="password" id="cpassword" placeholder="Confirm Password" name = "password"/>
+				<button onclick="register()" class="btn btn-primary btn-lg btn-block"> Register </button>
+	  </div>
+	</div>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+      authDomain: "tippsy-trials.firebaseapp.com",
+      databaseURL: "https://tippsy-trials.firebaseio.com",
+      projectId: "tippsy-trials",
+      storageBucket: "",
+      messagingSenderId: "688884359408"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src= "js/signup.js" ></script>
+
+</body>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href= "css/profile.css" type = "text/css">
+
+	<!-- Tab icon -->
+	<link rel="icon" type="image/png" href="img/Beer-icon.png">
+
+	<title>Profile</title>
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="TTLogo"/>
+        </a>
+      </div>
+
+      <ul class="nav navbar-nav nav-navitems navbar-right">
+         <a href="index.html" button onclick="logout()" button type="button" class="btn btn-primary btn-lg navbar-btn">Logout</button></a>
+      </ul>
+    </div>
+  </nav> <!-- ./End Navbar -->
+
+	<div class="profile-page" id="profile">
+		<h1 style="text-align: center;">Profile Page</h1>
+		<h1>Account Details</h1>
+		<h2>Name:<textarea id="name" cols="40" rows="1" placeholder="Enter Username"></textarea></h2>
+		<h2>Email:<textarea id="email" cols="40" rows="1"></textarea></h2>
+    <h2>Baseline Score: <text id="score"></text></h2>
+
+
+		<h1> Physical Profile</h1>
+		<form>
+		<span style="display: inline; font-size: 20px;">
+		DOB:<input id="date" type="date"></input>
+		Weight:<input id="weight" type="number" placeholder="Enter Weight in lb"></input>
+		Body type:<select id="build" placeholder="body type">
+			<option value="Lean">Lean</option>
+			<option value="buff/muscular">Buff/Muscular</option>
+			<option value="excess fat">Excess Fat</option>
+			<option value="Morbidly Obese">Morbidly Obese</option>
+		</select>
+		</span>
+	</div>
+
+<div class="col-xs-12" style="height:75px;"></div>
+
+	<div class="col-lg-12">
+	    <div class="row">
+	        <div class="col-xs-4">
+	        </div>
+	        <div class="col-xs-2">
+	            <button button type="button" class="btn btn-primary btn-lg btn-block" onclick="updateUser();">Save Changes</button></a>
+	        </div>
+	        <div class="col-xs-2">
+	            <a href="baseline.html" button type="button" class="btn btn-primary btn-lg btn-block">Set Baseline</button></a>
+	        </div>
+	        <div class="col-xs-4">
+	        </div>
+	    </div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDHwu69T-fUttHJcNbZ_uXjGOylvGoFD_0",
+			authDomain: "tippsy-trials.firebaseapp.com",
+			databaseURL: "https://tippsy-trials.firebaseio.com",
+			projectId: "tippsy-trials",
+			storageBucket: "",
+			messagingSenderId: "688884359408"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src= "js/profile.js" ></script>
+</body>
+
+</html>
