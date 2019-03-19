@@ -1,18 +1,57 @@
 body {
 	color:black;
+	background-color: #dbdcdd;
 	padding-left: 20px;
 	font-family: Garamond;
 }
-div.about-me{
+
+* {
+  box-sizing: border-box;
+}
+
+.about-me {
 	font-family: Garamond;
 }
 
-div.personal-info{
+.personal-info {
 	text-align:center;
 	
 }
-div.assignments{
+.assignments {
 	font-size:13px;
 	text-align:center;
 }
 
+.column {
+	float: left;
+	padding: 10px;
+	/*margin: 10px;*/
+}
+
+.left {
+	/*padding-left: 15px;*/
+	padding-top: 95px;
+	width: 30%;
+	height: 350px;
+	background-color: #333232;
+	color: white;
+	text-align: center;
+}
+
+.right {
+	width: 70%;
+	height: 350px;
+	background-color: white;
+}
+
+.left img{
+	width: 30px;
+	height: 30px;
+}
+
+/* Clear floats after the column */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
