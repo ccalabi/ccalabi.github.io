@@ -1,13 +1,16 @@
 body {
 	color:black;
-	background-color: #dbdcdd;
-	padding-left: 20px;
+	background-image: url("bottleBackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #EDEAE5/*#dbdcdd*/;
 	font-family: Garamond;
 }
 
-* {
+/** {
   box-sizing: border-box;
-}
+}*/
 
 .about-me {
 	font-family: Garamond;
@@ -18,30 +21,54 @@ body {
 	
 }
 .assignments {
-	font-size:13px;
+	font-size:15px;
 	text-align:center;
 }
 
+.row {
+	display: table;
+	min-height: 350px;
+	width: 100%;
+}
+
 .column {
-	float: left;
-	padding: 10px;
-	/*margin: 10px;*/
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
 }
 
 .left {
-	/*padding-left: 15px;*/
-	padding-top: 95px;
+	border-radius: 20px;
 	width: 30%;
-	height: 350px;
-	background-color: #333232;
-	color: white;
+	background-color: #003d60/*#026670*//*#333232*/;
+	opacity: 0.8;
+	color: #29f9f5/*9FEDD7*/;
 	text-align: center;
 }
 
 .right {
+	border-radius: 20px;
 	width: 70%;
-	height: 350px;
-	background-color: white;
+	background-color: #bbf8f3/*#FEF9C7*/;
+	opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+	.row {
+		display: block;
+		min-height: 150px;
+		width: 100%;
+	}
+	.column {
+		display: block;
+		vertical-align: middle;
+		padding: 10px;
+		width: 100%;
+	}
+	.left, .right {
+		display: block;
+		width: 100%;
+	}
 }
 
 .left img{
@@ -51,7 +78,7 @@ body {
 
 /* Clear floats after the column */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
