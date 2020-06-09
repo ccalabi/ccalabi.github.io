@@ -7,49 +7,52 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<title>Cori's Portfolio</title>
+		<script src="index.js"></script>
 	</head>
 	
 	<body>	
-	<!-- Page container -->	
-	<!-- <div class="container" style="max-width: 1400px"> -->
-		<!-- Grid -->
-		<div class="row">  
-			<!-- Left column -->
-			<div class="column left">
+		<!-- Navigation Menu -->
+		<div class="sideNav" id="sideNav">
+			<!-- <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a> -->
+			<a href="index.html">Home</a>
+			<a href="tipsyWeb/index.html">Tipsy Trials</a>
+			<a href="computerGraphics.html">Computer Graphics</a>
+		</div>
+		<div class="MenuBtn" id="MenuBtn" onclick="toggleNav()">&#9776;
+		</div>
+		<!-- Page container -->	
+		<div class="container" id="clickOut">
+			<img id="backPhoto" src="bottleBackground.jpg">
+			<!-- Grid -->
+			<div class="row">  
+				<!-- Left column -->
+				<div class="column left">			
+					<h1 id="name">Cori Calabi</h1>
+					<a href="https://www.linkedin.com/in/coricalabi/"> <img src="LinkedInLogo.png"> </a>
+					<a href="https://github.com/ccalabi"> <img src="GitHubLogo.png"> </a>
+				</div> 
+				<!-- Right column -->
+				<div class="column right">
+					<h2>About Me</h2>
+					<p>Hello!  Thanks for viewing my portfolio.  I'm Cori, a relatively recent graduate from UC Santa Cruz with degrees in Human Biology and Computer Science.  I'm still figuring out where I want to go in my career, my ideal would be something that combines my love of tech with my interest in medicine.</p>
+					<p>I've built a web app and iOS app, programmed in JavaScript, Java, C, and Assembly, with a little Python on the side, and have greatly enjoyed it all.  I love a challenge, and I think that one of the best feelings is that breakthrough when you finally find a bug in your program and get it to work right.</p>
+					<p>I'm looking for work in web development (mainly front end), testing, or automation.  However, learning and variety are two of my favorite things, so I'm very open to expanding my skillset for positions in another area.</p>
+					<h2>Projects</h2>
 
-				<h1 id="name">Cori Calabi</h1>
-				<a href="https://www.linkedin.com/in/coricalabi/"> <img src="LinkedInLogo.png"> </a>
-				<a href="https://github.com/ccalabi"> <img src="GitHubLogo.png"> </a>
-				<div class="personal-info">	
-				</div>
-	
-				<div class="interests">
-				</div>
-			</div> 
-			<!-- End left column -->
-			<!-- Right column -->
-			<div class="column right">
-				<h2>About Me</h2>
-				<p>Hello!  Thanks for viewing my portfolio.  I'm Cori, a relatively recent graduate from UC Santa Cruz with degrees in Human Biology and Computer Science.  I'm still figuring out where I want to go in my career, my ideal would be something that combines my love of tech with my interest in medicine.</p>
-				<p>I've built a web app and iOS app, programmed in JavaScript, Java, C, and Assembly, with a little Python on the side, and have greatly enjoyed it all.  I love a challenge, and I think that one of the best feelings is that breakthrough when you finally find a bug in your program and get it to work right.</p>
-				<p>I'm looking for work in web development (mainly front end), testing, or automation.  However, learning and variety are two of my favorite things, so I'm very open to expanding my skillset for positions in another area.</p>
-				<h2>Projects</h2>
+					<b><a href="tipsyWeb/index.html">Tipsy Trials</a></b> sobriety testing web app created with four peers. It was created over the course of about eight weeks and was the first experience with web apps for all of us.
+				
+					<p><b><a href="http://www.sunwork.org/Installation_map.html" target="_blank">SunWork installation map</a></b> I created for the business using JavaScript and Google Maps APIs (initially using Google Fusion Tables before Google retired this feature).</p>
 
-				<b><a href="tipsyWeb/index.html">Tipsy Trials</a></b> sobriety testing web app created with four peers. It was created over the course of about eight weeks and was the first experience with web apps for all of us.
-			
-				<p><b><a href="http://www.sunwork.org/Installation_map.html" target="_blank">SunWork installation map</a></b> I created for the business using JavaScript and Google Maps APIs (initially using Google Fusion Tables before Google retired this feature).</p>
+					<!-- <p><a href="https://people.ucsc.edu/~ccalabi/IntroProgramming/week01/" target="_blank">Intro to Programming for the Arts</a>: First programming experience, has not been updated since originally completed</p> -->
 
-				<!-- <p><a href="https://people.ucsc.edu/~ccalabi/IntroProgramming/week01/" target="_blank">Intro to Programming for the Arts</a>: First programming experience, has not been updated since originally completed</p> -->
-
-				<h4>Intro to Computer Graphics:</h4>
-				<ul id="graphics">
-					<li><a href="graphics/picking/picking.html">Picking</a></li>
-					<li><a href="graphics/cameraControls.html">Camera Controls</a></li>
-					<li><a href="graphics/textures/textures.html">Textures</a></li>
-				</ul>
-			</div>
-			<!-- End right column -->
-		</div> <!-- End grid -->
-	<!-- </div>  End page container -->
+					<h4>Intro to Computer Graphics:</h4>
+					<ul id="graphics">
+						<li><a href="graphics/picking/picking.html">Picking</a></li>
+						<li><a href="graphics/cameraControls.html">Camera Controls</a></li>
+						<li><a href="graphics/textures/textures.html">Textures</a></li>
+					</ul>
+				</div> <!-- End right column -->
+			</div> <!-- End grid -->
+		</div> <!-- End page container -->
 	</body>
 </html>

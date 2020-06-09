@@ -66,8 +66,8 @@ body {
 
 .personal-info {
 	text-align:center;
+	
 }
-
 .assignments {
 	font-size:15px;
 	text-align:center;
@@ -76,11 +76,9 @@ body {
 .row {
 	display: table;
 	z-index: 0;
-	border-style: solid;
-	border-color: transparent;
-	border-width: 0px 10px 0px 0px;
-	min-height: 350px;
-	width: 98%;
+/*	position: fixed;
+*/	min-height: 350px;
+	width: 100%;
 }
 
 .column {
@@ -100,7 +98,6 @@ body {
 
 .right {
 	border-radius: 20px;
-	margin-right: 10px;
 	width: 70%;
 	background-color: #bbf8f3/*#FEF9C7*/;
 	opacity: 0.8;
@@ -122,11 +119,6 @@ body {
 		display: block;
 		width: 97%;
 	}
-}
-
-.left img{
-	width: 30px;
-	height: 30px;
 }
 
 /* Clear floats after the column */
