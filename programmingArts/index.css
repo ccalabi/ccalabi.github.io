@@ -1,0 +1,334 @@
+body {
+	font-family: avenir;
+	font-family: 20px;
+	background-image: url("fog.jpg");
+	background-size: cover;
+	text-align: center;
+	color:  #e6e6e6;
+}
+
+h1 {
+	font-family: avenir;
+	font-weight: bold;
+	text-align: center;
+	font-size: 60px;
+	color: #e6e6e6;
+}
+
+h4 {
+	font-family: avenir;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	color: #e6e6e6;
+
+}
+
+.design {
+	padding-left: 150px;
+	padding-right: 150px;
+}	
+
+.challenges {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.show-css {
+	font-size: 60%;
+}
+
+.myButton1q {
+	padding-top: 23px;
+} 
+
+.button1q {
+	font-family: Papyrus;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	color: #ffe0b3;
+	background-color: #e68a00;
+    border: none;
+	border-radius: 8px;
+	outline: none;
+	cursor:pointer;
+}
+
+.button1q:hover {
+	color: #804d00;
+}
+
+.button1q:active {
+	transform: translateY(4px);
+}
+
+
+.show-javascript {
+	font-size: 60%;
+	padding-top: 15px;
+}
+
+a:link {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+a:visited {
+	color: 	purple;
+}
+
+
+.dropdownButtonDiv{
+	padding: 100px;
+}
+
+.dropdownButton {
+	border-radius: 4px;
+	background-color: #004d00; 
+    color: black; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 250px;
+	border: none;
+}
+
+
+#Hogwarts, #Endor, #DiagonAlley, #Coruscant {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+
+#failHogwarts, #failEndor, #failDiagonAlley, #failCoruscant {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+
+#HogwartsStory, #HogwartsFirebolt, #HogwartsLightsaber, #HogwartsATAT, #HogwartsInvisibility {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+#EndorStory, #EndorFirebolt, #EndorLightsaber, #EndorATAT, #EndorInvisibiility {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+
+#DiagonAlleyStory, #DiagonAlleyFirebolt, #DiagonAlleyLightsaber, #DiagonAlleyATAT, #DiagonAlleyInvisibility {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+#CoruscantStory, #CoruscantFirebolt, #CoruscantLightsaber, #CoruscantATAT, #CoruscantInvisibility {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+#personality1, #ptotal1, #personality2, #ptotal2, #personality3, #ptotal3, #personality4, #ptotal4 {
+    font-family: avenir;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+}
+
+#output1q {
+	padding-bottom: 50px;
+	color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button1q {
+	border-radius: 4px;
+	background-color: #004d39; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-transform: uppercase
+    width: 250px;
+}
+
+.button1a1, .button1a2, .button1a3, .button1a4 {
+	border-radius: 4px;
+	background-color: #4d004d; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+} 
+
+
+.button2a5, .button2a6, .button2a7, .button2a8 {
+	border-radius: 4px;
+	background-color: #000099; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.button3a9, .button3a10, .button3a11, .button3a12, .button3a13, .button3a14, .button3a15, .button3a16 {
+	border-radius: 4px;
+	background-color: #194d33; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;
+}
+
+.button4a17, .button4a18, .button4a19, .button4a20, .button4a21 {
+	border-radius: 4px;
+	background-color: #660000; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+
+.button5a22, .button5a23, .button5a25, .button5a26, .button5a27, .button5a28, .button5a29 {
+	border-radius: 4px;
+	background-color: #4d004d; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;
+}
+
+.button6a30, .button6a31, .button6a32, .button6a33, .button6a34, .button6a35 {
+	border-radius: 4px;
+	background-color: #000099; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.button7a36, .button7a37, .button7a38, .button7a39, .button7a40, .button7a41, .button7a42, .button7a43 {
+	border-radius: 4px;
+	background-color: #194d33; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+
+.button8a44, .button8a45, .button8a46, .button8a47, .button8a48, .button8a49, .button8a50, .button8a51 {
+	border-radius: 4px;
+	background-color: #660000; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;
+}
+
+.button9a52, .button9a53, .button9a54, .button9a55, .button9a56, .button9a57, .button9a58 {
+	border-radius: 4px;
+	background-color: #4d004d; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.button10a59, .button10a62, .button10a63, .button10a65, .button10a66 {
+	border-radius: 4px;
+	background-color: #000099; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.button11a71, .button11a72, .button11a73, .button11a74 {
+	border-radius: 4px;
+	background-color: #194d33; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.button12a75, .button12a76, .button12a77, .button12a78, .button12a79, .button12a80, .button12a81 {
+	border-radius: 4px;
+	background-color: #660000; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+
+.revealPersonality {
+	border-radius: 4px;
+	background-color: #004d39; 
+    color: white; 
+    font-family: avenir;
+    font-size: 20px;
+    padding: 14px 40px;
+    text-align: center;
+    text-transform: uppercase
+    width: 50%;    
+}
+

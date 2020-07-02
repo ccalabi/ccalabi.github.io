@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<head>
+	<title>Potter Wars: Final Project</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="index.js"></script>
+</head>
+	
+<body>
+
+<h1>PotterWars</h1>
+
+<hr width="720px" align="center" color="#000000">
+
+
+<div>
+	<hr width="720px" align="center" color="#000000">
+	<div id="start">
+		<button class="button1q">Start the Quiz to find out who you are!</button>
+	</div>
+</div>
+
+<!--Location Descriptions-->
+<div id="Hogwarts" style="display:none;">
+	<p>Welcome to Hogwarts School of Witchcraft, Wizardry, and the Force! It's the start of a new year, and everyone is in the 
+	Great Hall waiting for the start-of-term feast to begin.  You're greeting your old friends and saying hello to new first year 
+	students.  You see a new student sitting on their own, separated by a couple of spaces on either side.  He seems to be a bit 
+	of an odd character, different from the other students.  Hogwarts has begun accepting and training young Jedis!  In the days 
+	following the welcome feast, how do you treat this unusual first year?</p>
+</div>
+
+<div id="Endor" style="display:none;">
+	<p>You are now in Endor, a small forested moon located in the Outer Rim Territories and also the homeland of Ewoks, 
+	a type of species. It's known to be quite dangerous here, but don't worry, you should be fine! You will be staying at 
+	its major city, Bright Tree Village. Endure is affiliated with the Galactic Empire, so expect to see a bunch of Stormtroopers 
+	hovering around. Since this is a major homeland to Ewoks, you will be surrounded by them. Let's just say they are an  
+	interesting little species. They are very skilled in forest survival and use spears, slings, and knives as weapons. Even 
+	though they are fairly small, Ewoks are physically strong enough to overpower combat-trained humans.</p>
+</div>
+
+<div id="DiagonAlley" style="display:none;">
+	<p>You just passed through the magical brick wall in the Leaky Cauldron into Diagon Alley!  You are an assistant/salesperson 
+	in Floursih & Blotts, the largest magical bookshop in London.  You see all the Hogwarts students come in with their parents 
+	and friends to get their books for the next year, and you see all the witches and wizards who come in for all their literary 
+	needs.  <br/>One day a few weeks before the start-of-the-school-year rush, the manager of Flourish & Blotts calls a meeting and 
+	introduces the newest salesperson, an odd-looking, slightly bizarre youngster.  The gossip is that the new Hogwarts graduate 
+	was the only person the shop manager could find to take the position.  </p>
+</div>
+
+<div id="Coruscant" style="display:none;">
+	<p>Welcome to Coruscant! Coruscant is located in the Inner Core and basically is the most influential planet in the entire 
+	galaxy. There are a couple affiliations with Coruscant, a very important one is the New Republic. You will be transported to 
+	Galactic City, a major city in Coruscant. This is a very diverse city, home to many different species and creatures. Once you 
+	are out in the big city, a strange creature approaches you. This creature has two heads and eight eyes.</p>
+</div>
+
+<!--Failure Descriptions-->
+<div id="failHogwarts" style="display:none;">
+	<p>Time has flown and it's Christmastime already!  Exams are finished and you're home with your family for the holidays.  
+	Friends from school come to visit on many days, or you go to see them.  No one is thinking about exams, except the book-crazy 
+	Hermione Granger, and that odd young padawan (Jedi-in-training), who seems determined to prove himself.  An owl arrives a few 
+	days before the holiday ends, carrying your grades.  You find the letter on the kitchen table and immediately tear it open.  
+	You felt like you aced two of your classes, and you're sure you passed the other three.<br/><br/>
+	You pull out the slip of paper, find the list of your classes, and skim to the letters next to it: One E (exceeds 
+	expectations), two A's (acceptable, lowest passing grade), one P (poor, must repeat subject),and one D (dreadful, must repeat 
+	subject).</p>
+</div>
+
+<div id="failEndor" style="display:none;">
+	<p>You are an Ewok and you are a part of a large group of other Ewoks. They have just asked you to be on the look-out for 
+	Stormtroopers. Your mission is to prevent the Stormtroopers from invading your group's territory. Unfortunately you get 
+	distracted and fail your task. The Stormtroopers invade and do massive destruction to the territory. You disappointed your 
+	group.</p>
+</div>
+	
+<div id="failDiagonAlley" style="display:none;">
+	<p>You've enjoyed your time as a clerk at Flourish & Blotts, but it's time to move on and start a career.  As one of the 
+	first Jedi students to graduate from Hogwarts, with good grades too, you expect that employers will jump at the chance to 
+	hire you.  You've applied at the Ministry of Magic to be Assistant to the Junior Head of Muggle Artifacts, at Weasleys' 
+	Wizard Wheezes to be a product tester and sourcer, and at St. Mungo's Hospital for Magical Maladies and Injuries to be a 
+	healer of spell damage.<br/> <br/>
+	It's been three weeks, and you haven't heard a peep from any of these potential employers.  A few more days pass, 
+	and then you get the first owl post reply: "Thank you for your application to become a product tester and sourcer at 
+	Weasleys' Wizard Wheezes.  However, we are unable to offer you a position at this time."  Later that day, another owl arrives, 
+	bearing a similar reply:  St. Mungo's Hospital has rejected you as well.  The next morning you check to see if any owls 
+	arrived, and find a letter on the kitchen table.  You break the Ministry of Magic seal on the back and pull out the paper 
+	inside.  Your eyes quickly search the page. The words "unable to offer you a position" jump out as if they're in bold type.  
+	Once again, rejected. </p>
+</div>	
+
+<div id="failCoruscant" style="display:none;">
+	<p>You are a young padawan. As a Jedi Apprentice, your Jedi Master has given you important instructions on the the following 
+	task: Obtain the lightsaber using the Force. As you stand still and focus, you can see the lightsaber slowly hovering above 
+	the ground, but you always lose focus whenever you try to retrieve it. Your Jedi Master is disappointed about the lack of 
+	your progress.</p>
+</div>
+
+
+<!--STORIES-->
+
+<!--Hogwarts-->
+<div id="HogwartsStory" style="display:none;">
+	<p>It's the Battle of Hogwarts.  The castle is on fire and crumbling beneath the Death Eaters' onslaught.  Students, members 
+	of the Order of the Phoenix, Death Eaters, residents of Hogsmeade, house elves, giants, and many others are furiously 
+	battling in the castle, on the grounds, and in the skies.  The situation seems hopeless, Voldemort's ranks are too numerous, 
+	they simply overwhelm the Hogwarts defenses and keep on swarming in.  You see bodies littering the ground, human and creature 
+	alike, from both sides of the battle.  You are returning from setting up traps in some upstairs corridors for the Death 
+	Eaters to ensnare themselves in.  As you descend the stairs into the Entrance Hall, the fighting thickens.  Spells are flying 
+	everywhere, ricocheting off the walls, blasting the stone apart.  A haze of dust and smoke fills the air.  There are numerous 
+	pairs and groups locked in battle, you see Professor McGonagall sending curse after curse at two masked Death Eaters, and one 
+	of the new Jedi students is doing his best to manipulate the Death Eaters' minds to confuse them and slow them down.  A few 
+	enemies notice you as you come down the stairs, and curses begin flying in your direction.  You quickly produce a shield 
+	charm to deflect them.</p>
+</div>
+
+<div id="HogwartsFirebolt" style="display:none;">
+	<p>You suddenly see a Firebolt broomstick lying partially hidden in some rubble.  What do you do with it?  <br/><br/>
+	You cannot apparate yet, so you climb on the broom and fly away from the castle, it's much too dangerous to be there! <br/><br/>
+	You grab it, run out of the Entrance Hall, and fly up to circle one of the giants who are destroying the castle.  
+	You want to take down as many giants as possible from this high vantage point where your spells can reach their faces, their 
+	one weak spot.  You know that you won't survive long in the air, what with spells going everywhere and the giants flailing 
+	arms and clubs, but stopping the giants would help everyone.  You manage to fell two of the four giants before you are 
+	swatted from the sky, and from life, by a giant's club. <br/><br/> 
+	You see the young Jedi fall to the floor, hit by a stunning spell and now defenseless.  You take the 
+	broomstick, run down to the Jedi, pick him up and pull him onto the broom with you.  You fly him to safety within the 
+	castle where Madam Pomfrey is healing other wounded and spell-damaged fighters. Then you return to pick up other fallen and 
+	injured fighters, dodging curses and giants and werewolves as you fly. <br/><br/> 
+	You jump onto the Firebolt, and fly high above to see how the battle is progressing.  When you do, you see a swarm of 
+	dementors approaching the castle.  You fly towards them, and meet them just as they are nearing the entrance to the castle.  
+	You think of the happiest memory you have and cast a patronus charm so powerful that it drives every dementor far away, and 
+	keeps them there.  You will gain great fame for your achievement tonight.</p>
+</div>
+
+<div id="HogwartsLightsaber" style="display:none;">
+	<p>The young Jedi student fighting below is hit by a curse that kills him.  You reach his side just in time for him to give 
+	you his light saber.  What do you do with it? <br/><br/>
+	You use it to deflect the curses flying around and to cut down any enemies in your way as you run out of Hogwarts and down 
+	towards the village of Hogsmeade, where you will be safe.  It's too dangerous to stay here!<br/><br/>
+	You go search for one of the other Jedi students, knowing that they can wield the lightsaber much better than you can.  You r
+	un up into the towers of the castle where there are many fighters, and you spot a young Jedi dodging curses down a corridor.  
+	You sprint to her and quickly hand over the light saber.  She had lost her own during the battle and so had little defense 
+	against the onslaught of spells.  You see many curses coming right at the two of you, and you know that you only have the 
+	power to stop some of them.  You perform a shield charm and throw yourself in front of the startled Jedi, catching the other 
+	curses with your body.  One of them is the killing curse, and you fall to the ground, never to rise again.<br/><br/>
+	You see Professor McGonagall get hit with a curse that tightly binds her in ropes.  She drops her wand and falls to the ground.  
+	You run to her side and use the lightsaber to cut the ropes that have completely wrapped around her body while you produce a 
+	shield charm with your wand to protect both of you.<br/><br/>
+	You use it to kill Voldemort's snake, Nagini, that Voldemort made into a horcrux (an object containing part of his soul so he 
+	can't die).  The only way to kill Voldemort is to get rid of all the horcruxes first.  Now that Nagini is out of the way, you 
+	go search for Voldemort himself.  If you kill him, you will go down in history as the bravest and most powerful wizard...</p>
+</div>
+
+<div id="HogwartsATAT" style="display:none;">
+	<p>You remember that the young Jedi student fighting below has a small scale model of a giant machine called an AT-AT up in 
+	his room.  You call to him and ask him if he still has the model.  He does have it, up in his dormitory somewhere.  You 
+	perform a summoning charm and the model comes zooming down to you.  You leave the castle and walk onto the grounds.  You 
+	perform an engorgement charm on the model, enlarging it until it is as big as the giants Voldemort brought with him.  Then 
+	you climb up into the pilot's cockpit.  Now what do you do with the AT-AT? <br/> <br/>
+	You turn the machine around and stomp your way out of the Hogwarts grounds, it's much too dangerous to stay! <br/> <br/>
+	You turn to the giants and start to fight them, knowing that eventually they will knock you down, but they are causing 
+	much of the wreckage to the castle and they're crushing many fighters beneath their feet.  You take down three of the four 
+	giants, but the last one places a well-aimed blow with his huge club and you and the pilot's cockpit are crushed. <br/> <br/>
+	You see Grawp, Hagrid's giant half-brother, getting beaten up by two of Voldemort's giants.  You direct the AT-AT over to the 
+	giants and start shooting them with the guns mounted on the AT-AT.  This distracts and wounds them, allowing Grawp to pick 
+	himself up and finish them off. <br/> <br/>
+	You see another big group of Voldemort's supporters gathering to the side of the castle, preparing to launch a new 
+	attack from that angle.  No one else has seen the new group yet, but you don't sound the alarm, you maneuver the AT-AT towards 
+	them and begin firing the guns attached to the machine.  The group, comprised of mostly wizards, quickly puts up a shield 
+	around themselves, but a shield charm can't block an AT-AT.   
+	Their spells bounce off the machine, and you soon reach the group and crush them.  That threat is finished!  You turn the 
+	AT-AT back to the castle to continue fighting, you know you will be praised and awarded for your actions tonight!</p>
+</div>
+
+<div id="HogwartsInvisibility" style="display:none;">
+	<p>Suddenly, Harry Potter runs by you, and sprints out of the Entrance Hall onto the grounds.  You stand in awe for a couple 
+	of seconds, and then notice that he dropped a bundle of cloth at the bottom of the stairs.  You pick it up and discover that 
+	it's a cloak!  You hold the cloak up to look at it and then drape it over your arm.  It becomes invisible!  You 
+	realize that this is an invisibility cloak and quickly pull it on.  While you are distracted by the cloak, another of Voldemort's 
+	minions comes into the Entrance Hall and spots you.  You've just pulled the cloak on when he fires a curse at you.  You 
+	look up and see it coming, but it's too late to stop it.  But the curse doesn't hit you!  The cloak turns the curse 
+	aside!  What do you do with the cloak? <br/><br/>
+	You run out of the castle and through the grounds, slipping unseen and untouched through the fighting.  You run down to the 
+	village of Hogsmeade, from where you can disapparate and get out of there! It's too dangerous to stay! <br/><br/>
+	You look out into the grounds and see Neville Longbottom dueling Bellatrix Lestrange.  Neville is tiring, and looks like he 
+	might fall at any moment.  You run over to him, push him out of Bellatrix's line of fire, and perform a shield charm.  You 
+	pull off the cloak, hand it to Neville, and push him back toward the castle.  He hesitates, but grabs the cloak and runs.  
+	You turn back to face Bellatrix, knowing you are no match for her, just as her curse shatters your shield.  You send a curse 
+	back to her, which she easily blocks.  Her next curse, which comes only a second after the first, gets in under your defenses, 
+	and you fall to the ground, dead.<br/><br/>
+	You look out into the grounds and see one of the other young Jedi being chased by a giant spider.  The Jedi  student is 
+	terrified, and is in danger not only of being eaten by the spider, but of being hit by one of the spells flying around him.  
+	You run out into the fray, sprinting toward the Jedi and spider.  Finally you catch up to them, the Jedi is cornered, he has 
+	no place to go but into the spider's pincers.  You swirl the cloak to cover him too.  The two of you barely fit under the 
+	cloak, but you hold onto him and run back toward the castle, leaving a very confused spider behind. <br/><br/>
+	You decide that, since the cloak gives you almost perfect protection, you are going to attack the strongest Death Eaters when 
+	they aren't expecting it.  You first see Rodolphus Lestrange fighting Mrs. Weasley, and as you move by them, you stun 
+	Lestrange from behind.  Then you take out Knott, Avery, and two more masked Death Eaters, hiding beneath the cloak and 
+	stunning them.  They never see you coming.  You know that you'll be praised and held in awe for your achievements.
+	</p>
+</div>
+
+
+<!--Endor-->
+<div id="EndorStory" style="display:none;">
+	<p>You and your friend just apparated onto Endor. You both quietly and carefully roam through the forest trying not to alert 
+	any possible traps. As wizards, it’s important not to get caught by Stormtroopers or just the Galactic Empire in general or 
+	else you will be turned into Darth Vader and experience dark consequences. As you and your friend hide behind a tree, you 
+	both see large groups of Ewoks furiously gathering their weapons and creating a perimeter around the forest. It’s unclear 
+	what exactly is happening, so you cautiously glance beyond your surroundings and observe that there are two Tie Fighters 
+	flying above the forest blasting at targets. You must do something! It’s not safe to hide behind that tree during this 
+	unexpected battle.</p>
+</div>
+
+<div id="EndorFirebolt" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	Get on your Firebolt Broomstick and fly the heck outta there!<br/><br/>
+	Only two Tie Fighters? You got this! You get on your Firebolt Broomstick and you fly up towards the Tie Fighters casting spells on them.<br/><br/>
+	You feel very bad for getting your friend into a situation like this, so you give them your Firebolt Broomstick and help them fly out of danger.<br/><br/>
+	You can be brave and fly yourself to Darth Vader and turn yourself in and face the dark consequences.</p>
+</div>
+
+<div id="EndorLightsaber" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	How’s a single lightsaber going to bring down two Tie Fighters? Take a run for it! (Sorry friend, good luck)<br/><br/>
+	You are a wizard, you are capable of anything! You are going to light up your lightsaber and fight like there’s no tomorrow.<br/><br/>
+	Your friend doesn’t have a lightsaber, they seem to be very scared, so you help them out and give them your lightsaber.<br/><br/>
+	You want your friend to be able to apperate back to Hogwarts, so you wave your lightsaber at them to distract them while your friend escapes the scene.</p>
+</div>
+
+<div id="EndorATAT" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	Because of the danger, you may choose to get in your AT-AT as a pilot and run away, leaving your friend behind.<br/><br/>
+	Maybe you are feeling courageous and you will take on the fight and battle against the Tie Fighters with your AT-AT.<br/><br/>
+	You’ll help your friend out because you care about them and their safety, so you give them your AT-AT.<br/><br/>
+	The only way to bring down those Tie Fighters is to detonate the AT-AT, creating a massive explosion, but you must be inside 
+	the AT-AT in order to initiate the detonation.</p>
+</div>
+
+<div id="EndorInvisibility" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	You are extremely terrified, so you put on your cloak and quickly run away leaving your friend behind.<br/><br/>
+	You’ll put on your cloak and face this battle, plus they won’t be able to see you so that’s a plus, right?<br/><br/>
+	You look back and see your friend having a panic attack, so you decide to tell them to put your cloak on to help them calm 
+	down.<br/><br/>
+	You’re a wizard, so you also carry a wand. You decide to put the cloak on and cast the strongest spell you have towards the 
+	Tie Fighters causing you to get extremely hurt to the point where you might not live, but you will have successfully beat the 
+	Tie Fighters.</p>
+</div>
+
+
+<!--Diagon Alley-->
+<div id="DiagonAlleyStory" style="display:none;">
+	<p>You have become a top-security vault guard and dragon trainer at Gringotts Wizarding Bank!  You are going about your duties 
+	one day when the alarm is sounded that there are intruders, thieves!, in Gringotts!  You hurry to the dragon's side, you have 
+	become good friends with him as you've been working with him, thanks to your Jedi training and abilities.  Out of the corner 
+	of your eye, you notice three people lurking in a corridor leading to some of the top-security vaults.  You see a glint of 
+	gold, and know that they must have already gotten into a vault.  Suddenly a horde of the goblins who run Gringotts come 
+	flooding into the dragon's chamber, yelling "Thieves!" and brandishing their weapons.  You know that they will want to make 
+	the dragon fight the thieves, and that the dragon, who was mistreated and even tortured by the goblins before they hired you, 
+	only wants to be free from his underground dungeon.  The three thieves unexpectedly jump onto the dragon's back, apparently thinking 
+	to fly to his and their freedom in the sky hundreds of feet above.  Will you help the dragon, and the thieves, escape or will 
+	you do the job you were hired for and help the goblins stop the thieves and keep the dragon imprisoned?</p>
+</div>
+
+<div id="DiagonAlleyFirebolt" style="display:none;">
+	<p>Using your Jedi powers, you bring your Firebolt broomstick that is in a nearby corridor to you.  What do you do with the 
+	Firebolt?<br/><br/>
+	You jump on the broom and fly away, up through the corridors and out of the bank.  They can figure that situation out for 
+	themselves!<br/><br/>
+	You hop on your broom, fly up to face all the goblins and use your Jedi mind powers to make them stand still and silent.  You 
+	let the thieves and dragon go free, but at the price of your job.<br/><br/>
+	You get on the broom and fly up to the top of the cavern so that it looks like you are blocking the exit.  But with your Jedi 
+	mind powers you talk to the dragon and tell him what is going on and what he needs to do to be free.  The dragon escapes, and 
+	you work together to make it look like you tried to stop the dragon and thieves.<br/><br/>
+	You get on the broom and fly above the dragon so you can use your Jedi mind powers on the thieves to make them get off the 
+	dragon and turn themselves in.  You know you'll get a pay raise and probably a promotion for this!
+	</p>
+</div>
+
+<div id="DiagonAlleyLightsaber" style="display:none;">
+	<p>You pull out the lightsaber that you always carry with you.  What do you do with it?<br/><br/>
+	You use the lightsaber to fight your way through the throng of angry goblins, and then you run up the corridors and out of 
+	Gringotts.  They can stop the thieves themselves!<br/><br/>
+	You jump in front of the dragon and the thieves and yell to the goblins that if they want to stop the thieves they'll have to 
+	get through you!  You know that you'll lose your job, but you'll have helped your dragon friend be free!<br/><br/>
+	You jump in front of the horde of goblins and seem to join their group, but with your Jedi mind powers you tell the dragon 
+	what to do to escape.  You even surreptitiously cut the dragon's chains with the lightsaber.<br/><br/>
+	You attack the dragon and the thieves with the lightsaber.  You do your job and you're sure you'll get a pay raise and maybe 
+	a promotion!</p>
+</div>
+
+<div id="DiagonAlleyATAT" style="display:none;">
+	<p>You remember your Jedi mind powers while you're watching the scene in front of you.  What do you do with them?<br/><br/>
+	You make the goblins let you leave the chamber and you run up the corridors and leave the bank.  They can deal with the 
+	thieves themselves!<br/><br/>
+	You face all the goblins and use your mind powers to make them stand still and silent.  You 
+	let the thieves and dragon go free, but at the price of your job.<br/><br/>
+	You talk to the dragon and tell him what is going on and what he needs to do to be free.  You stand with the goblins so that 
+	it looks like you are helping them, but in reality you help the dragon, and the thieves, go free.<br/><br/>
+	You force the dragon to remain in place and force the thieves to get down and turn themselves in. You know you'll get a pay 
+	raise and probably a promotion for this! 
+	</p>
+</div>
+
+<div id="DiagonAlleyInvisibility" style="display:none;">
+	<p>You pull out the invisibility cloak that was loaned to you by your friend Harry Potter.  What do you do with it?<br/><br/>
+	You put on the cloak and run past the goblins, through the bank, and outside.  They can deal with the thieves themselves!<br/><br/>
+	You pull the cloak on and run to the dragon.  Using your Jedi mind powers you tell him how he can escape.  Then you pull off 
+	the cloak and cause a diversion to distract the goblins while the dragon flies free.  You know you'll lose your job for this, 
+	but you've helped to free your friend!<br/><br/>
+	You put on the cloak and first go to the dragon to tell him how to escape.  Then you go to the group of goblins and use your 
+	Jedi mind powers to make them think that the thieves let the dragon go free and then ran down another corridor.  The dragon 
+	escapes while the goblins run after what they think are the thieves.<br/><br/>
+	You pull on the cloak and sneak up behind the dragon and pull the thieves off of his back.  You pull off the cloak and 
+	present the intruders to the group of goblins.  You know you'll get a pay raise and maybe a promotion for doing such a good 
+	job!</p>
+</div>
+
+
+<!--Coruscant-->
+<div id="CoruscantStory" style="display:none;">
+	<p>Young Wizard Padawan, your duty is needed. Coruscant has been invaded by the Stormtroopers. Darth Vader has sent them as 
+	an order to attain you. At this very moment, you’ve got to escape the building you are currently in and find your Jedi Master 
+	for a battle like this. You must travel across Galactic City, Stormtroopers are currently working on creating a perimeter 
+	around you so that they can trap you. By using the Force, your Jedi Master sent you a secret message telling you to meet 
+	him/her at the top of the highest building in the city. As you take a quick turn, a large group of Stormtroopers march towards 
+	you causing you to turn around and take a different route. As soon as you reach the rooftop, you accidentally trip while the 
+	Stormtroopers quickly catch up to you.</p>
+</div>
+
+<div id="CoruscantFirebolt" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	You summon your Firebolt broomstick, rapidly making its way to you, you hop on it and vanish you way off of the buildings 
+	rooftop.<br/><br/>
+	Once you summon your broomstick from your room, you get on it and you start manipulating the Stormtroopers into thinking that 
+	you are at the bottom of the building. Once they leave, you make your way to your Jedi Master and you start to cast spells on 
+	all the Stormtroopers that are trying to defeat him.<br/><br/>
+	As you lay on the ground, you think about your Jedi Master and how much he is struggling, so you manipulate the Stormtroopers 
+	around you and you use the Force to send your broomstick to your Jedi Master so that he can fly his way out of the mess he is 
+	in.<br/><br/>
+	You care a lot about your Jedi Master and you also believe in sacrificing yourself in order to resolve this battle. You 
+	are not afraid of Darth Vader, so you surrender yourself to the Stormtroopers and you allow them to attain you. You’ll be 
+	visiting Darth Vader very soon, and it will not be pretty.</p>
+</div>
+
+<div id="CoruscantLightsaber" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	You take out your lightsaber and blade through all the Stormtroopers around you and runaway from the building.<br/><br/>
+	You want to make your Jedi Master proud of you, so you defeat all the Stormtroopers with your lightsaber.<br/><br/>
+	Your Jedi Master is is struggling, so you use the Force to hand him your lightsaber so that he can attack twice as more 
+	Stormtroopers.<br/><br/>
+	You see no way out, you are completely surrounded by them so you decide to surrender yourself to them. </p>
+</div>
+
+<div id="CoruscantATAT" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	You get on the AT-AT you attained and hide in there while you run away, leaving your Jedi Master behind.<br/><br/>
+	Stormtroopers have terrible aim anyways, you decide to get in your AT-AT (by casting a spell) and you start blasting out all 
+	the Stromtroopers coming your way.<br/><br/>
+	Your Jedi Master needs help, you can see him struggling as he take on dozens of Stormtroopers, so you cast a spell that puts 
+	your Master in the AT-AT.<br/><br/>
+	You let the Stormtroopers catch you or else your Master will have more of them to fight and he is already struggling alone.</p>
+</div>
+
+<div id="CoruscantInvisibility" style="display:none;">
+	<p>At this very specific moment, what would you do?<br/><br/>
+	With your cloak of invisibility, you quickly put it over you as you become invisible, and run away from the Stormtroopers.<br/><br/>
+	You put on your cloak of invisibility and confuse the Stormtroopers as to where you are, and you start casting spells on them 
+	as you make your way to your Jedi Master.<br/><br/>
+	As you glance at your Jedi Master, you can notice that he could use some great help, so you use the Force and you hand your 
+	Master the cloak so he can put it over him, that way he will become invisible to the Stormtroopers that were trying to blast 
+	him.<br/><br/>
+	You want to sacrifice your life for your Jedi Master, but you don’t want him to see you get hurt and blasted by the 
+	Stormtroopers. You decide to put on your cloak as you lay on the ground waiting for all the Stormtroopers to start blasting 
+	in all directions. You close your eyes and wait for the moment to come.</p>
+</div>
+	
+	
+<!--BUTTONS-->	
+
+<div id="output1q" class="myButton1q">
+</div>	
+	
+<div id="answer1Buttons" style="display:none;">
+	<button class="button1a1">Hogwarts</button><br/>
+	<button class="button1a2">Endor</button><br/>
+	<button class="button1a3">Diagon Alley</button><br/>
+	<button class="button1a4">Coruscant</button><br/>
+</div>	
+	
+<div id="answer2Buttons" style="display:none;">
+	<button class="button2a5">Befriend them</button><br/>
+	<button class="button2a6">Wait to see how others react</button><br/>
+	<button class="button2a7">Ignore them</button><br/>
+	<button class="button2a8">Make fun of them</button><br/>
+</div>
+
+<div id="answer3Buttons" style="display:none;">
+	<button class="button3a9">Angry</button><br/>
+	<button class="button3a10">Superior</button><br/>
+	<button class="button3a11">Well-known/popular</button><br/>
+	<button class="button3a12">Perceptive</button><br/>
+	<button class="button3a13">Tumultuous</button><br/>
+	<button class="button3a14">Wise</button><br/>
+	<button class="button3a15">Risk-taker</button><br/>
+	<button class="button3a16">Insecure/Unsure of yourself</button>	<br/>
+</div>
+
+<div id="answer4Buttons" style="display:none;">
+	<button class="button4a17">The leader</button><br/>
+	<button class="button4a18">The supportive, caring one</button><br/>
+	<button class="button4a19">The smart one</button><br/>
+	<button class="button4a20">The mysterious one</button><br/>
+	<button class="button4a21">The sidekick</button><br/>
+</div>
+
+<div id="answer5Buttons" style="display:none;">
+	<button class="button5a22">Love</button><br/>
+	<button class="button5a23">Friends & Family</button><br/>
+	<!--removed 24-->
+	<button class="button5a25">Stability</button><br/>
+	<button class="button5a26">The Force</button><br/>
+	<button class="button5a27">Success</button><br/>
+	<button class="button5a28">Power</button><br/>
+	<button class="button5a29">Happiness</button><br/>
+</div>
+
+<div id="answer6Buttons" style="display:none;">
+	<button class="button6a30">Proficiency with a lightsaber</button><br/>
+	<button class="button6a31">All-encompassing knowledge</button><br/>
+	<button class="button6a32">Ability to see the future</button><br/>
+	<!--removed 33-->
+	<button class="button6a34">Psychic mind powers</button><br/>
+	<button class="button6a35">Everything!</button><br/>
+</div>
+
+<div id="answer7Buttons" style="display:none;">
+	<button class="button7a36">Keep trying until I succeed</button><br/>
+	<button class="button7a37">I've learned to expect it, I'm always failing</button><br/>
+	<button class="button7a38">Get angry and determined and try again until I succeed</button><br/>
+	<button class="button7a39">Calmly accept it, move on, and try again</button><br/>
+	<button class="button7a40">Blame it on myself</button><br/>
+	<button class="button7a41">Learn from it</button><br/>
+	<button class="button7a42">Get revenge</button>	<br/>
+	<button class="button7a43">Fall into despair and depression</button><br/>	
+</div>
+	
+<div id="answer8Buttons" style="display:none;">
+	<button class="button8a44">Find the meaning of life</button><br/>
+	<button class="button8a45">Make the world a better place</button><br/>
+	<button class="button8a46">Be a hero</button><br/>
+	<button class="button8a47">Protect and nurture my loved ones and myself</button><br/>
+	<button class="button8a48">Complete the legacy of my inspiration</button><br/>
+	<button class="button8a49">Be the best</button><br/>
+	<button class="button8a50">Feel like I belong</button>	<br/>
+	<button class="button8a51">Have great significance</button>	<br/>
+</div>
+	
+<div id="answer9Buttons" style="display:none;">
+	<button class="button9a52">Being betrayed by family or friends</button><br/>
+	<button class="button9a53">Total and complete failure</button><br/>
+	<button class="button9a54">Losing someone I love</button><br/>
+	<button class="button9a55">Rejection</button><br/>
+	<button class="button9a56">Disappointing people who are important to me</button><br/>
+	<button class="button9a57">Dying</button><br/>
+	<button class="button9a58">Not achieving my dreams</button>	<br/>
+</div>	
+
+<div id="answer10Buttons" style="display:none;">
+	<!--removed 59-->
+	<!--removed 60-->
+	<!--removed 61-->
+	<button class="button10a62">A Firebolt Broomstick</button><br/>
+	<button class="button10a63">A Lightsaber</button><br/>
+	<!--removed 64-->
+	<button class="button10a65">An AT-AT (All Terrain Armored Transport)</button><br/>
+	<button class="button10a66">The Cloak of Invisibility</button>	<br/>
+</div>	
+
+<div id="answer11Buttons" style="display:none;">
+	<!--removed67-70-->
+	<button class="button11a71">Run Away</button><br/>
+	<button class="button11a72">Sacrifice Yourself</button><br/>
+	<button class="button11a73">Help a Friend</button><br/>
+	<button class="button11a74">Take the Glory</button>	<br/>
+</div>	
+
+<div id="answer12Buttons" style="display:none;">
+	<button class="button12a75">Tragically</button><br/>
+	<button class="button12a76">Peacefully</button><br/>
+	<button class="button12a77">Suddenly</button><br/>
+	<button class="button12a78">Heroically</button><br/>
+	<button class="button12a79">Slowly</button><br/>
+	<button class="button12a80">Fearlessly</button><br/>
+	<button class="button12a81">Grandly</button><br/>
+</div>	
+
+
+<!--Personality Stuff-->
+<div id="personalityReveal" style="display:none;">
+	<button class="revealPersonality">Find out who you are!</button>
+</div>
+
+<div id="personality1" style="display:none;">
+	<p>Willow Wood Green Lightsaber</p>
+	<div id="ptotal1">Score: </div>
+	<p>You are an uncommon personality! You have huge potential, but a long path ahead to fulfill your destiny.  You are also 
+	   plagued by insecurities, which you'll have to overcome in order to make the most of your future.  The force is strong 
+	   with you, indeed. Built with salvaged materials and alloy metal, Luke's lightsaber is unique. You serve for the New Jedi 
+	   Order, completely against the dark force. You don't fear rage, you fight against it. With this lightsaber, you will be 
+	   wilding through many life-changing events.  <br/>
+	   People like you: Luke Skywalker, Lily Potter, Ron Weasley</p>
+</div>
+
+	
+<div id="personality2" style="display:none;">
+	<hr width="720px" align="center" color=white>
+	<p>Yew Wood Red Lightsaber</p>
+	<div id="ptotal2">Score: </div>
+	<p>You possess great power.  You have a fearsome reputation and you are definitely not mediocre or timid.  Your power 
+	   and reputation may be good or evil, that's up to you.  You rage with anger and you release such strong dark force. You 
+	   want others to fear you and serve you. With this light saber, you plan to conquer a galaxy under your orders. <br/>
+	   People like you: Darth Vader, Voldemort, Ginny Weasley</p>
+</div>
+
+
+<div id="personality3" style="display:none;">
+	<hr width="720px" align="center" color=white>
+	<p>Cedar Wood Blue Lightsaber</p>
+	<div id="ptotal3">Score:</div>
+	<p>You have a strong character and you're perceptive.  You're very loyal to and protective of the people you love, 
+	   and you can be a surprisingly frightening and strong adversary if your loved ones are threatened or harmed.  Obtaining the 
+	   lightsaber of Obi-Wan Kenobi leads you to a path of wise strength. To others, you are a Jedi Master, you have knowledge 
+	   and faith in the good. People will look up to you, while others want to steal that away from you.  <br/> 
+	   People like you: Obi Wan Kenobi, Professor Horace Slughorn</p>
+</div>
+
+
+<div id="personality4" style="display:none;">
+	<hr width="720px" align="center" color=white>
+	<p>Hawthorn Wood Red Cross-guard-Bladed Lightsaber</p>
+	<div id="ptotal4">Score:</div>
+	<p>You are a contradictory person, with conflicting emotions, thoughts, talents, and beliefs.  You are good at both 
+	   healing and curses.  You may be in a period of turmoil or this may be your normal state, but you are a very complex 
+	   and intriguing person!  With this cross guard bladed light saber, you want to finish what Darth Vader started. This is 
+	   an ancient design, having a menace look and feel to it. You favor the dark side and you believe it has an impactful 
+	   significance. <br/> People like you: Kylo Ren, Draco Malfoy</p>
+</div>
+
+<!--Design, Challenges, Tech, Etc.-->
+
+<div class="dropdownButtonDiv">
+	<button class="dropdownButton">Show/Hide Design, Challenges, Etc.</button>
+</div>
+
+<div class="dropdown" style="display:none;">
+		
+	<div class="dropdown-content"> 	
+		
+		<div class="project">
+			<h2 id="section4">Project Description</h2>
+			<p>Take this quiz to find out who you are in the PotterWars world! Your personality will be described by a lightsaber 
+			wood and color.  Basically, lightsabers are now being made with certain woods that match to the user based on 
+			specific personality characteristics.</p>
+			<p>The highest score is the personality you are most like</p>
+			<p>Enjoy!</p>
+		</div>
+		
+		<div class="design">
+			<h2 id="section1">Design Considerations</h2>
+			<p>We made the design and challenges section a dropdown section so that it wouldn't interfere with the look of the quiz.
+			We made the background a mysterious fog that works for both Star Wars and Harry Potter.</p>
+			<p>Also, when the personality is revealed, we decided to have it show all the personalities and how much of each you 
+			are.  We felt this provides more info about Harry Potter and Star Wars and the personality that you are.</p>
+			<div class="show-css"><a target="_blank" href="index.css">[Show CSS styling for this page]</a>
+			</div>
+		</div>
+
+		<hr width="720px" align="center" color="#000000">
+
+		<div class="challenges">
+			<h2 id="section2">Challenges</h2>
+			<p>Our first challenge was getting all the buttons and questions to show and hide when they should.  Once that part 
+			was finished, with the quiz progressing as it should, we encountered problems with how to determine the personality. 
+			 With Wes' help, we decided to have each answer add or subtract points to each personality, and the personaliity with 
+			 the highest points at the end was the one you are.</p>
+			 <p>We would have liked to add pictures and more cool stuff to the questions, but we ran out of time.</p>
+		</div>
+		
+		<div class="show-javascript">
+			<a target="_blank" href="index.js">[Show JavaScript for this page]</a>
+		</div>
+
+		<hr width="720px" align="center" color="#000000">
+
+		<div class="techAcknow">
+			<h2 id="section3">Technology & Acknowledgements</h2>
+			<p>In our Javascript we used arrays, if-else statements, and the .html and .append DOM manipulations. 
+			We used code from Stackoverflow user Amber to calculate the user's personality (the code is noted in the Javascript).  
+			Wes gave us the idea of calculating the personality in this way.
+			</p>
+		</div>
+
+		<div class="links">
+			<hr width="720px" align="center" color="#000000">
+			<h3 id="section4">Links</h3>
+				<a href="../week01/index.html">Cori's Main Page</a> <br/>
+				<a href="http://people.ucsc.edu/~jaortega/art101/week01/">Jacky's Main Page<a/> <br/>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
